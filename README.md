@@ -2,6 +2,9 @@ Project is a mod for the video game Skyrim that adds an NPC companion meant to f
 
 Uses assets from:
 The Eyes of Beauty: https://www.nexusmods.com/skyrim/mods/13722
+
+&
+
 KS Hairdos: https://www.nexusmods.com/skyrimspecialedition/mods/6817
 
 
