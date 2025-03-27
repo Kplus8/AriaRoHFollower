@@ -1,15 +1,10 @@
 ;BEGIN FRAGMENT CODE - Do not edit anything between this and the end comment
-;NEXT FRAGMENT INDEX 7
+;NEXT FRAGMENT INDEX 9
 Scriptname K8RH_QF_K8RHAriaKino_060DAF0D Extends Quest Hidden
 
 ;BEGIN ALIAS PROPERTY Note3SolstChest
 ;ALIAS PROPERTY TYPE ReferenceAlias
 ReferenceAlias Property Alias_Note3SolstChest Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Note3RefSolst
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Note3RefSolst Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Note3MiddenChest
@@ -22,9 +17,14 @@ ReferenceAlias Property Alias_Note3MiddenChest Auto
 ReferenceAlias Property Alias_Player Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY ThalmorCorpse
+;BEGIN ALIAS PROPERTY Aria
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_ThalmorCorpse Auto
+ReferenceAlias Property Alias_Aria Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY KinoThalNote
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_KinoThalNote Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Note3Ref
@@ -32,18 +32,20 @@ ReferenceAlias Property Alias_ThalmorCorpse Auto
 ReferenceAlias Property Alias_Note3Ref Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Aria
+;BEGIN ALIAS PROPERTY Note3RefSolst
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Aria Auto
+ReferenceAlias Property Alias_Note3RefSolst Auto
 ;END ALIAS PROPERTY
 
-;BEGIN FRAGMENT Fragment_4
-Function Fragment_4()
-;BEGIN CODE
-K8RHAriaKinoWetScene.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
+;BEGIN ALIAS PROPERTY ThalmorCorpse
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_ThalmorCorpse Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY KinoDarknut1
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_KinoDarknut1 Auto
+;END ALIAS PROPERTY
 
 ;BEGIN FRAGMENT Fragment_6
 Function Fragment_6()
@@ -53,10 +55,34 @@ K8RHAriaKinoSkulltulaIndy.Start()
 EndFunction
 ;END FRAGMENT
 
+;BEGIN FRAGMENT Fragment_7
+Function Fragment_7()
+;BEGIN CODE
+K8RHAriaKinoThalNoteReact.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_4
+Function Fragment_4()
+;BEGIN CODE
+K8RHAriaKinoWetScene.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
 ;BEGIN FRAGMENT Fragment_2
 Function Fragment_2()
 ;BEGIN CODE
 K8RHAriaKinoBoatTalk.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_8
+Function Fragment_8()
+;BEGIN CODE
+K8RHAriaKinoHalfway.Start()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -78,3 +104,9 @@ Scene Property K8RHAriaKinoWetScene  Auto
 Scene Property K8RHAriaKinoBoatTalk  Auto  
 
 Scene Property K8RHAriaKinoSkulltulaIndy  Auto  
+
+Quest Property K8RHTeleport  Auto  
+
+Scene Property K8RHAriaKinoThalNoteReact  Auto  
+
+Scene Property K8RHAriaKinoHalfway  Auto  
