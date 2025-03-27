@@ -5,7 +5,7 @@ Scriptname K8RH_SF_K8RHAriaKinoSkulltula_0616E48B Extends Scene Hidden
 ;BEGIN FRAGMENT Fragment_0
 Function Fragment_0()
 ;BEGIN CODE
-debug.MessageBox("Test Spider")
+debug.MessageBox("Test")
 ;END CODE
 EndFunction
 ;END FRAGMENT
