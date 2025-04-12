@@ -1,15 +1,10 @@
 ;BEGIN FRAGMENT CODE - Do not edit anything between this and the end comment
-;NEXT FRAGMENT INDEX 29
+;NEXT FRAGMENT INDEX 31
 Scriptname K8RH_QF_K8RHAriaKino_060DAF0D Extends Quest Hidden
 
-;BEGIN ALIAS PROPERTY KinoDarknut1
+;BEGIN ALIAS PROPERTY Aria
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_KinoDarknut1 Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Note3MiddenChest
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Note3MiddenChest Auto
+ReferenceAlias Property Alias_Aria Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY KinoThalNote
@@ -17,14 +12,9 @@ ReferenceAlias Property Alias_Note3MiddenChest Auto
 ReferenceAlias Property Alias_KinoThalNote Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Note4
+;BEGIN ALIAS PROPERTY Note3SolstChest
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Note4 Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY SkullHammerKino
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_SkullHammerKino Auto
+ReferenceAlias Property Alias_Note3SolstChest Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY ThalmorCorpse
@@ -32,24 +22,14 @@ ReferenceAlias Property Alias_SkullHammerKino Auto
 ReferenceAlias Property Alias_ThalmorCorpse Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY KinoSilverCent
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_KinoSilverCent Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Note3SolstChest
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Note3SolstChest Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY OoT
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_OoT Auto
-;END ALIAS PROPERTY
-
 ;BEGIN ALIAS PROPERTY Note3RefSolst
 ;ALIAS PROPERTY TYPE ReferenceAlias
 ReferenceAlias Property Alias_Note3RefSolst Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Note4
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Note4 Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Note3Ref
@@ -57,24 +37,14 @@ ReferenceAlias Property Alias_Note3RefSolst Auto
 ReferenceAlias Property Alias_Note3Ref Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY KinoStalKnight
+;BEGIN ALIAS PROPERTY SkullHammerKino
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_KinoStalKnight Auto
+ReferenceAlias Property Alias_SkullHammerKino Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY KinoFinalChest
+;BEGIN ALIAS PROPERTY Note3MiddenChest
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_KinoFinalChest Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY KinoSmallKey5
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_KinoSmallKey5 Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Aria
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Aria Auto
+ReferenceAlias Property Alias_Note3MiddenChest Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Player
@@ -82,41 +52,35 @@ ReferenceAlias Property Alias_Aria Auto
 ReferenceAlias Property Alias_Player Auto
 ;END ALIAS PROPERTY
 
-;BEGIN FRAGMENT Fragment_25
-Function Fragment_25()
-;BEGIN AUTOCAST TYPE K8RHAriaSceneChecker
-Quest __temp = self as Quest
-K8RHAriaSceneChecker kmyQuest = __temp as K8RHAriaSceneChecker
-;END AUTOCAST
-;BEGIN CODE
-;Note 4 SoT
-kmyQuest.SetScene(K8RHAriaKinoNote4YSoT)
-kmyQuest.StartCheck()
-;END CODE
-EndFunction
-;END FRAGMENT
+;BEGIN ALIAS PROPERTY KinoSmallKey5
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_KinoSmallKey5 Auto
+;END ALIAS PROPERTY
 
-;BEGIN FRAGMENT Fragment_24
-Function Fragment_24()
-;BEGIN AUTOCAST TYPE K8RHAriaSceneChecker
-Quest __temp = self as Quest
-K8RHAriaSceneChecker kmyQuest = __temp as K8RHAriaSceneChecker
-;END AUTOCAST
-;BEGIN CODE
-;Comment on OoT
-kmyQuest.SetScene(K8RHAriaKinoOcarina)
-kmyQuest.StartCheck()
-;END CODE
-EndFunction
-;END FRAGMENT
+;BEGIN ALIAS PROPERTY KinoFinalChest
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_KinoFinalChest Auto
+;END ALIAS PROPERTY
 
-;BEGIN FRAGMENT Fragment_7
-Function Fragment_7()
-;BEGIN CODE
-K8RHAriaKinoThalNoteReact.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
+;BEGIN ALIAS PROPERTY KinoStalKnight
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_KinoStalKnight Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY OoT
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_OoT Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY KinoDarknut1
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_KinoDarknut1 Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY KinoSilverCent
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_KinoSilverCent Auto
+;END ALIAS PROPERTY
 
 ;BEGIN FRAGMENT Fragment_23
 Function Fragment_23()
@@ -127,26 +91,10 @@ K8RHAriaKinoNoticeGate.Start()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_28
-Function Fragment_28()
+;BEGIN FRAGMENT Fragment_20
+Function Fragment_20()
 ;BEGIN CODE
-;return tracker to make sure 95 happens only if return trip needed
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_6
-Function Fragment_6()
-;BEGIN CODE
-K8RHAriaKinoSkulltulaIndy.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_18
-Function Fragment_18()
-;BEGIN CODE
-K8RHAriaKinoAfterGauntlet.Start()
+K8RHAriaKinoCentSee.Start()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -159,18 +107,73 @@ K8RHAriaKinoSkullHammerPickup.Start()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_4
-Function Fragment_4()
-;BEGIN CODE
-K8RHAriaKinoWetScene.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
-
 ;BEGIN FRAGMENT Fragment_8
 Function Fragment_8()
 ;BEGIN CODE
 K8RHAriaKinoHalfway.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_28
+Function Fragment_28()
+;BEGIN CODE
+;return tracker to make sure 95 happens only if return trip needed
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_0
+Function Fragment_0()
+;BEGIN CODE
+K8RHAriaKinoNote3Scene.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_27
+Function Fragment_27()
+;BEGIN CODE
+;Gate Comment if returning with SoT
+K8RHAriaKinoReturn.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_21
+Function Fragment_21()
+;BEGIN CODE
+K8RHAriaKinoCentAfter.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_2
+Function Fragment_2()
+;BEGIN CODE
+K8RHAriaKinoBoatTalk.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_6
+Function Fragment_6()
+;BEGIN CODE
+K8RHAriaKinoSkulltulaIndy.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_25
+Function Fragment_25()
+;BEGIN AUTOCAST TYPE K8RHAriaSceneChecker
+Quest __temp = self as Quest
+K8RHAriaSceneChecker kmyQuest = __temp as K8RHAriaSceneChecker
+;END AUTOCAST
+;BEGIN CODE
+;Note 4 SoT
+kmyQuest.SetScene(K8RHAriaKinoNote4YSoT)
+kmyQuest.StartCheck()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -189,19 +192,40 @@ kmyQuest.StartCheck()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_20
-Function Fragment_20()
+;BEGIN FRAGMENT Fragment_30
+Function Fragment_30()
 ;BEGIN CODE
-K8RHAriaKinoCentSee.Start()
+;Block of Time react
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_27
-Function Fragment_27()
+;BEGIN FRAGMENT Fragment_4
+Function Fragment_4()
 ;BEGIN CODE
-;Gate Comment if returning with SoT
-K8RHAriaKinoReturn.Start()
+K8RHAriaKinoWetScene.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_29
+Function Fragment_29()
+;BEGIN CODE
+;Block of Time get near
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_24
+Function Fragment_24()
+;BEGIN AUTOCAST TYPE K8RHAriaSceneChecker
+Quest __temp = self as Quest
+K8RHAriaSceneChecker kmyQuest = __temp as K8RHAriaSceneChecker
+;END AUTOCAST
+;BEGIN CODE
+;Comment on OoT
+kmyQuest.SetScene(K8RHAriaKinoOcarina)
+kmyQuest.StartCheck()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -214,26 +238,18 @@ K8RHAriaKinoGohmaReact.Start()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_21
-Function Fragment_21()
+;BEGIN FRAGMENT Fragment_18
+Function Fragment_18()
 ;BEGIN CODE
-K8RHAriaKinoCentAfter.Start()
+K8RHAriaKinoAfterGauntlet.Start()
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_0
-Function Fragment_0()
+;BEGIN FRAGMENT Fragment_7
+Function Fragment_7()
 ;BEGIN CODE
-K8RHAriaKinoNote3Scene.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_2
-Function Fragment_2()
-;BEGIN CODE
-K8RHAriaKinoBoatTalk.Start()
+K8RHAriaKinoThalNoteReact.Start()
 ;END CODE
 EndFunction
 ;END FRAGMENT

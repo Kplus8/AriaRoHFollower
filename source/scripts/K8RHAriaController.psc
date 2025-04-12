@@ -219,7 +219,7 @@ Function CheckOutfit()
             Debug.Trace("Aria Outfit: Aria is in a settlement and will equip a city outfit.")
             rnpcActor.SetOutfit(K8RH_OutfitCity)
         else 
-            Debug.Trace("Ashe Outfit: Ashe is not in a city or home, or other conditions not met. Equipping her adventure outfit.")
+            Debug.Trace("Ashe Outfit: Aria is not in a city or home, or other conditions not met. Equipping her adventure outfit.")
             rnpcActor.SetOutfit(K8RH_OutfitAdventure)
         endif 
     ; Check for custom outfit set

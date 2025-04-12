@@ -12,9 +12,17 @@ Armor Property ArmorTheGoldenGauntletsSlowRoH  Auto
 
 MiscObject Property MAGOOTOcarinaOfTimeRoH  Auto  
 
+Book Property FairyLetter  Auto  
+
+MiscObject Property MagicMedallionEther  Auto  
+
 GlobalVariable Property GoldGauntCount  Auto
   
 GlobalVariable Property OoTCount  Auto  
+
+GlobalVariable Property FairyLetterCount  Auto  
+
+GlobalVariable Property EtherCount Auto  
 
 Event OnInit()
 	;Golden Gauntlets
@@ -24,6 +32,10 @@ Event OnInit()
 	AddInventoryEventFilter(ArmorTheGoldenGauntletsSlowRoH)
 	;OoT
 	AddInventoryEventFilter(MAGOOTOcarinaOfTimeRoH)
+	;Fairy Letter
+	AddInventoryEventFilter(FairyLetter)
+	;Ether
+	AddInventoryEventFilter(MagicMedallionEther)
 endEvent
 
 Event OnItemAdded(Form akBaseItem, int aiItemCount, ObjectReference akItemReference, ObjectReference akSourceContainer)
@@ -39,5 +51,15 @@ Event OnItemAdded(Form akBaseItem, int aiItemCount, ObjectReference akItemRefere
 	if OoTCount.Value < 1
 		CountScript.OoTCheck()
 		RemoveInventoryEventFilter(MAGOOTOcarinaOfTimeRoH)
+	endIf
+	;Fairy Letter
+	if FairyLetterCount.Value < 1
+		CountScript.FairyLetterCheck()
+		RemoveInventoryEventFilter(FairyLetter)
+	endIf
+	;Ether
+	if EtherCount.Value < 1
+		CountScript.EtherCheck()
+		RemoveInventoryEventFilter(MagicMedallionEther)
 	endIf
 endEvent
