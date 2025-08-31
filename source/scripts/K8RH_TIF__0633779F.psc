@@ -6,7 +6,7 @@ Scriptname K8RH_TIF__0633779F Extends TopicInfo Hidden
 Function Fragment_2(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
-;GetOwningQuest().SetStage()
+GetOwningQuest().SetStage(16)
 ;END CODE
 EndFunction
 ;END FRAGMENT

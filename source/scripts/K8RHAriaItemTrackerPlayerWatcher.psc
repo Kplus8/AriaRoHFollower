@@ -16,6 +16,8 @@ Book Property FairyLetter  Auto
 
 MiscObject Property MagicMedallionEther  Auto  
 
+WEAPON Property ZeldaBowRoH  Auto
+
 GlobalVariable Property GoldGauntCount  Auto
   
 GlobalVariable Property OoTCount  Auto  
@@ -23,6 +25,8 @@ GlobalVariable Property OoTCount  Auto
 GlobalVariable Property FairyLetterCount  Auto  
 
 GlobalVariable Property EtherCount Auto  
+
+GlobalVariable Property ZeldaBowCount  Auto  
 
 Event OnInit()
 	;Golden Gauntlets
@@ -36,6 +40,8 @@ Event OnInit()
 	AddInventoryEventFilter(FairyLetter)
 	;Ether
 	AddInventoryEventFilter(MagicMedallionEther)
+	;Bow of Light
+	AddInventoryEventFilter(ZeldaBowRoH)
 endEvent
 
 Event OnItemAdded(Form akBaseItem, int aiItemCount, ObjectReference akItemReference, ObjectReference akSourceContainer)
@@ -62,4 +68,9 @@ Event OnItemAdded(Form akBaseItem, int aiItemCount, ObjectReference akItemRefere
 		CountScript.EtherCheck()
 		RemoveInventoryEventFilter(MagicMedallionEther)
 	endIf
-endEvent
+	;Bow of Light
+	if ZeldaBowCount.Value < 1
+		CountScript.ZeldaBowCheck()
+		RemoveInventoryEventFilter(ZeldaBowRoH)
+	endIf
+endEvent  

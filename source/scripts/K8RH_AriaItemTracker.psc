@@ -14,6 +14,8 @@ Book Property FairyLetter  Auto
 
 MiscObject Property MagicMedallionEther  Auto  
 
+WEAPON Property ZeldaBowRoH  Auto  
+
 GlobalVariable Property GoldGauntCount  Auto
   
 GlobalVariable Property OoTCount  Auto  
@@ -21,6 +23,8 @@ GlobalVariable Property OoTCount  Auto
 GlobalVariable Property FairyLetterCount  Auto  
 
 GlobalVariable Property EtherCount Auto
+
+GlobalVariable Property ZeldaBowCount  Auto  
 
 
 Function GoldGauntCheck()
@@ -69,6 +73,18 @@ Function EtherCheck()
 		if CurrentCount > 0
 			EtherCount.Value = 1
 			UpdateCurrentInstanceGlobal(EtherCount)
+			;debug.Notification("Debug: GG registered")
+		endif
+	endif
+endFunction
+
+Function ZeldaBowCheck()
+	if ZeldaBowCount.Value < 1
+		;debug.Notification("Debug: GG being checked")
+		float CurrentCount = Game.GetPlayer().GetItemCount(ZeldaBowRoH)
+		if CurrentCount > 0
+			ZeldaBowCount.Value = 1
+			UpdateCurrentInstanceGlobal(ZeldaBowCount)
 			;debug.Notification("Debug: GG registered")
 		endif
 	endif
