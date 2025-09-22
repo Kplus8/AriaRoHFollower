@@ -18,6 +18,10 @@ MiscObject Property MagicMedallionEther  Auto
 
 WEAPON Property ZeldaBowRoH  Auto
 
+Armor Property MajorasMaskTrueRoH  Auto  
+
+WEAPON Property FierceDeitySwordLesserRoH  Auto  
+
 GlobalVariable Property GoldGauntCount  Auto
   
 GlobalVariable Property OoTCount  Auto  
@@ -27,6 +31,10 @@ GlobalVariable Property FairyLetterCount  Auto
 GlobalVariable Property EtherCount Auto  
 
 GlobalVariable Property ZeldaBowCount  Auto  
+
+GlobalVariable Property MajoraCount  Auto  
+
+GlobalVariable Property FDSCount  Auto
 
 Event OnInit()
 	;Golden Gauntlets
@@ -42,6 +50,10 @@ Event OnInit()
 	AddInventoryEventFilter(MagicMedallionEther)
 	;Bow of Light
 	AddInventoryEventFilter(ZeldaBowRoH)
+	;Majora's Mask
+	AddInventoryEventFilter(MajorasMaskTrueRoH)
+	;Initial FDS
+	AddInventoryEventFilter(FierceDeitySwordLesserRoH)
 endEvent
 
 Event OnItemAdded(Form akBaseItem, int aiItemCount, ObjectReference akItemReference, ObjectReference akSourceContainer)
@@ -72,5 +84,15 @@ Event OnItemAdded(Form akBaseItem, int aiItemCount, ObjectReference akItemRefere
 	if ZeldaBowCount.Value < 1
 		CountScript.ZeldaBowCheck()
 		RemoveInventoryEventFilter(ZeldaBowRoH)
+	endIf
+	;Majora's Mask
+	if MajoraCount.Value < 1
+		CountScript.MajoraCheck()
+		RemoveInventoryEventFilter(MajorasMaskTrueRoH)
+	endIf
+	;FDS
+	if FDSCount.Value < 1
+		CountScript.FDSCheck()
+		RemoveInventoryEventFilter(FierceDeitySwordLesserRoH)
 	endIf
 endEvent  
