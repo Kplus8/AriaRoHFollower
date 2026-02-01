@@ -5,7 +5,7 @@ quest property myQST auto
 int property preReqStage = -1 auto
 {(Optional)Stage that must be set for this script to run. Default: NONE}
 int property StageToSet auto
-{Set this stage when the actor dies}
+{Set this stage when the item moves into the player inventory}
 
 auto STATE waiting
 	EVENT OnContainerChanged(ObjectReference newContainer, ObjectReference oldContainer)
@@ -17,7 +17,7 @@ auto STATE waiting
 		elseif preReqStage != -1 && myQST.getStageDone(preReqStage) == FALSE
 ; 			debug.trace(self + " activated before stage " + preReqStage + " of " + myQST + " was set")
 		else
-; 			debug.trace(self + " got defaultSetSTageonDeath script into a bad state!")
+; 			debug.trace(self + " got K8RH_SetStagePickup script into a bad state!")
 		endif
 	endEVENT
 endSTATE

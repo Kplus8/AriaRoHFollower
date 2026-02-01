@@ -65,7 +65,7 @@ endFunction
 Function FairyLetterCheck()
 	if FairyLetterCount.Value < 1
 		;debug.Notification("Debug: GG being checked")
-		float CurrentCount = Game.GetPlayer().GetItemCount(MAGOOTOcarinaOfTimeRoH)
+		float CurrentCount = Game.GetPlayer().GetItemCount(FairyLetter)
 		if CurrentCount > 0
 			FairyLetterCount.Value = 1
 			UpdateCurrentInstanceGlobal(FairyLetterCount)
