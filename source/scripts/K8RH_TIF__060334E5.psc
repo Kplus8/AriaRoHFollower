@@ -12,6 +12,8 @@ else
     GetOwningQuest().SetObjectiveDisplayed(10)
     GetOwningQuest().SetStage(10)
 endif
+(K8RHAriaFollower as K8RHAriaController).SetFollower(akSpeaker)
+(K8RHAriaFollower as K8RHAriaController).Setup()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -19,3 +21,5 @@ EndFunction
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
 
 Scene Property K8RHAriaStarterJustThanks  Auto  
+
+Quest Property K8RHAriaFollower  Auto  

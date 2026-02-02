@@ -12,6 +12,7 @@ auto STATE waiting
 		if preReqStage == -1 || myQST.getStageDone(preReqStage) == TRUE
 			if (newContainer == Game.GetPlayer())
 				myQST.setStage(stageToSet)
+				myQST.setStage(stageToSet);done a second time just in case
 				gotoState("inactive")
 			endif
 		elseif preReqStage != -1 && myQST.getStageDone(preReqStage) == FALSE
