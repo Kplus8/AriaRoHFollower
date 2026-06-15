@@ -22,6 +22,8 @@ Armor Property MajorasMaskTrueRoH  Auto
 
 WEAPON Property FierceDeitySwordLesserRoH  Auto  
 
+Book Property BookRelicsRecipesTerminanForgeRoH  Auto  
+
 GlobalVariable Property GoldGauntCount  Auto
   
 GlobalVariable Property OoTCount  Auto  
@@ -35,6 +37,8 @@ GlobalVariable Property ZeldaBowCount  Auto
 GlobalVariable Property MajoraCount  Auto  
 
 GlobalVariable Property FDSCount  Auto
+
+GlobalVariable Property TMFRead  Auto  
 
 Event OnInit()
 	;Golden Gauntlets
@@ -54,6 +58,8 @@ Event OnInit()
 	AddInventoryEventFilter(MajorasMaskTrueRoH)
 	;Initial FDS
 	AddInventoryEventFilter(FierceDeitySwordLesserRoH)
+	;Initial TMF
+	AddInventoryEventFilter(BookRelicsRecipesTerminanForgeRoH)
 endEvent
 
 Event OnItemAdded(Form akBaseItem, int aiItemCount, ObjectReference akItemReference, ObjectReference akSourceContainer)
@@ -95,4 +101,9 @@ Event OnItemAdded(Form akBaseItem, int aiItemCount, ObjectReference akItemRefere
 		CountScript.FDSCheck()
 		RemoveInventoryEventFilter(FierceDeitySwordLesserRoH)
 	endIf
-endEvent  
+	;TMFRead
+	if TMFRead.Value < 1
+		CountScript.TMFCheck()
+		RemoveInventoryEventFilter(BookRelicsRecipesTerminanForgeRoH)
+	endIf
+endEvent 

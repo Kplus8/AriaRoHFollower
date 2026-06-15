@@ -20,6 +20,8 @@ Armor Property MajorasMaskTrueRoH  Auto
 
 WEAPON Property FierceDeitySwordLesserRoH  Auto  
 
+Book Property BookRelicsRecipesTerminanForgeRoH  Auto  
+
 GlobalVariable Property GoldGauntCount  Auto
   
 GlobalVariable Property OoTCount  Auto  
@@ -33,6 +35,8 @@ GlobalVariable Property ZeldaBowCount  Auto
 GlobalVariable Property MajoraCount  Auto  
 
 GlobalVariable Property FDSCount  Auto
+
+GlobalVariable Property TMFRead  Auto  
 
 
 Function GoldGauntCheck()
@@ -117,6 +121,18 @@ Function FDSCheck()
 		if CurrentCount > 0
 			FDSCount.Value = 1
 			UpdateCurrentInstanceGlobal(FDSCount)
+			;debug.Notification("Debug: GG registered")
+		endif
+	endif
+endFunction
+
+Function TMFCheck()
+	if TMFRead.Value < 1
+		;debug.Notification("Debug: GG being checked")
+		float CurrentCount = Game.GetPlayer().GetItemCount(BookRelicsRecipesTerminanForgeRoH)
+		if CurrentCount > 0
+			FDSCount.Value = 1
+			UpdateCurrentInstanceGlobal(TMFRead)
 			;debug.Notification("Debug: GG registered")
 		endif
 	endif
